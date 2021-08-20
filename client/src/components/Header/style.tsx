@@ -16,16 +16,20 @@ export const SHeaderWrapper = styled.div`
   @media (min-width: 1024px) {
     flex-direction: row;
     justify-content: space-between;
-    padding: 6px 60px;
+    padding: 16px 60px;
   }
 
   @media (min-width: 1280px) {
-    padding: 16px 60px;
   }
 `;
 
 export const SHeaderMenu = styled.div`
   display: flex;
+  flex-direction: column;
+
+  @media (min-width: 440px) {
+    flex-direction: row;
+  }
   
   @media (min-width: 1024px) {
     max-width: 690px;
@@ -83,29 +87,9 @@ export const SMenuItem = styled.a`
 export const SHeaderLogo = styled.div`
   color:#212123;
   font-weight: 500;
+  margin: 15px 0;
+
+  @media (min-width: 1024px) {
+    margin: 0;
+  }
 `;
-
-
-/* .nav-link:hover:before {
-  transform: scale(1);
-}
-
-.nav-link::before {
-  content: "";
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 1px;
-  transition: .3s transform ease;
-  background: #fff;
-  transform: scale(0);
-}
-
-@media (min-width: 780px) {
-
-}
-
-@media (min-width:  1280px) {
-
-} */

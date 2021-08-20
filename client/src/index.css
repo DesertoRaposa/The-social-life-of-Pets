@@ -9,3 +9,10 @@ code {
   font-family: 'Roboto', sans-serif;
 }
 
+span {
+  color:#fff;
+  
+  @media (min-width: 1024px) {
+    color:#7A46CE;
+  } 
+}

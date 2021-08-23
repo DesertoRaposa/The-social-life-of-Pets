@@ -58,7 +58,7 @@ export const SMenuItem = styled.a`
 
   &:before {
     content: "";
-    width: 100%;
+    width: fit-content;
     position: absolute;
     bottom: -5px;
     left: 0;
@@ -66,6 +66,10 @@ export const SMenuItem = styled.a`
     transition: .3s transform ease;
     background: #fff;
     transform: scale(0);
+
+    @media (min-width: 560px) {
+      width: 100%;
+    }
   }
 
   &:first-child {

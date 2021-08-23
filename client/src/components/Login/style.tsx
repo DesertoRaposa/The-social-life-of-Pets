@@ -22,11 +22,13 @@ export const SLoginWrapper = styled.div`
   @media (min-width: 1024px) {
     max-width: 369px;
     padding: 25px 35px 35px 35px;
+    margin-top: 160px;
+    margin-right: 30px;
+    
   }
 
-  @media (min-width: 1280px) {
-    margin-left: 70%;
-    margin-top: -20%;
+  @media (min-width: 1920px) {
+    margin-right: 100px;
   }
 `;
 
@@ -69,6 +71,9 @@ export const SLoginSubtitle = styled.div`
 `;
 
 export const SLoginForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   @media (min-width: 560px) {
 
@@ -135,14 +140,15 @@ export const SLoginInput = styled.input`
   }
 `;
 
-export const SLoginButton = styled.div`
-  width: 100%;
+export const SLoginButton = styled.button`
+  width: 80%;
   background: #000;
   color: #fff;
   border-radius: 8px;
   padding: 10px;
   text-align: center;
   margin-top: 10px;
+  border: none;
   
   @media (min-width: 560px) {
 

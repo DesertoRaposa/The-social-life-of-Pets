@@ -10,26 +10,36 @@ import {
   SJoinWrapper,
   STitle,
   SSubTitle,
-  SJoinButton
+  SJoinButton,
+  SContainer
 } from './style';
 
 const Home = (): JSX.Element => {
   return (
     <SWrapper>
       <Header />
-      <SJoinWrapper>
-        <STitle>
-          The social life <span><br />of Pets</span>
-        </STitle>
-        <SSubTitle>
-          Hello! Here  you can create an account for your lovely pet
-        </SSubTitle>
-        <SJoinButton>
-          Присоединиться к нам
-        </SJoinButton>
-      </SJoinWrapper>
-      <Login />
-      {/* <Register /> */}
+      <SContainer>
+        <SJoinWrapper>
+          <STitle>
+            The social life <span><br />of Pets</span>
+          </STitle>
+          <SSubTitle>
+            Hello! Here  you can create an account for your lovely pet
+          </SSubTitle>
+          <SJoinButton>
+            Присоединиться к нам
+          </SJoinButton>
+        </SJoinWrapper>
+        <Login />
+        {/* <Register /> */}
+      </SContainer>
+      <SContainer>
+        <SJoinWrapper>
+          <STitle>
+            Кого ты можешь<br />встретить у нас
+          </STitle>
+        </SJoinWrapper>
+      </SContainer>
     </SWrapper>
   );
 }

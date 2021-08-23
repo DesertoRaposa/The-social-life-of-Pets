@@ -13,6 +13,28 @@ export const SWrapper = styled.div`
   }
 `;
 
+export const SContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+
+
+  @media (min-width: 560px) {
+
+  }
+
+  @media (min-width: 768px) {
+
+  }
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    padding: 0 50px 0 0;
+  }
+
+  @media (min-width: 1280px) {
+  }
+`;
+
 export const STitle = styled.h1`
   font-weight: 700;
   font-size: 32px;
@@ -23,8 +45,12 @@ export const STitle = styled.h1`
   }
 
   @media (min-width: 1024px) {
-    font-size: 85px;
+    font-size: 78px;
     line-height: 100px;
+  }
+
+  @media (min-width: 1280px) {
+    font-size: 85px;
   }
 
   span {
@@ -58,7 +84,7 @@ export const SSubTitle = styled.h2`
 export const SJoinWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 20px 50px 0 50px;
+  padding: 0 50px 0 50px;
   align-items: center;
 
   @media (min-width: 560px) { 
@@ -68,9 +94,12 @@ export const SJoinWrapper = styled.div`
 
   @media (min-width: 1024px) {
     max-width: 100%;
-    padding-left: 240px;
     margin: 135px 0 0 0;
     display: block;
+  }
+
+  @media (min-width: 1280px) {
+    padding-left: 240px;
   }
 `;
 

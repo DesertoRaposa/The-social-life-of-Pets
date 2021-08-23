@@ -23,7 +23,6 @@ const Header = (): JSX.Element => {
         <SMenuItem href="#">Register</SMenuItem>
         <SMenuItem href="#">All Posts</SMenuItem>
         <SMenuItem href="#">Feed</SMenuItem>
-        <SMenuItem href="#">About</SMenuItem>
       </SHeaderMenu>
     </SHeaderWrapper>
   );

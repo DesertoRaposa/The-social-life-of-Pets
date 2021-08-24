@@ -7,7 +7,7 @@ export const SHeaderWrapper = styled.div`
   justify-content: center;
   margin: 0 auto;
   max-width: 1440px;
-  padding: 13px 20px;
+  padding: 13px 20px 0 20px;
 
   @media (min-width: 480px) {
     padding: 4px 20px;

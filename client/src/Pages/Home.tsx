@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Header from '../components/Header/Header';
@@ -13,8 +13,14 @@ import {
   SJoinButton,
   SContainer
 } from './style';
+import BaseModalWrapper from '../components/Modal/BaseModalWrapper';
 
 const Home = (): JSX.Element => {
+  const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
+
+  const toggleModal = () => {
+    setIsModalVisible(wasModalVisible => !wasModalVisible)
+  }
   return (
     <SWrapper>
       <Header />
@@ -26,9 +32,12 @@ const Home = (): JSX.Element => {
           <SSubTitle>
             Hello! Here  you can create an account for your lovely pet
           </SSubTitle>
-          <SJoinButton>
+          <SJoinButton onClick={toggleModal}>
             Присоединиться к нам
           </SJoinButton>
+          <BaseModalWrapper
+            isModalVisible={isModalVisible}
+            onCloseClick={toggleModal} />
         </SJoinWrapper>
         <Login />
         {/* <Register /> */}
@@ -36,7 +45,7 @@ const Home = (): JSX.Element => {
       <SContainer>
         <SJoinWrapper>
           <STitle>
-            Кого ты можешь<br />встретить у нас
+            Кого ты можешь<br />встретить <span>у нас</span>
           </STitle>
         </SJoinWrapper>
       </SContainer>

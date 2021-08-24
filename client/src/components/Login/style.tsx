@@ -5,7 +5,7 @@ export const SLoginWrapper = styled.div`
   background: #fff;
   border-radius: 28px;
   margin: auto;
-  margin-top: 80px;
+  margin-top: 58px;
   display: flex;
   flex-direction: column;
   padding: 20px 25px 25px 25px;

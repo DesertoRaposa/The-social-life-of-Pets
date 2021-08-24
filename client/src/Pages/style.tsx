@@ -38,10 +38,13 @@ export const SContainer = styled.div`
 export const STitle = styled.h1`
   font-weight: 700;
   font-size: 32px;
+  margin-top: 45px;
+  align-self: baseline;
 
   @media (min-width: 560px) {
     font-size: 48px;
     line-height: 50px;
+    align-self: inherit;
   }
 
   @media (min-width: 1024px) {
@@ -69,10 +72,11 @@ export const SSubTitle = styled.h2`
   font-size: 20px;
   font-weight: 700;
   max-width: 278px;
+  align-self: baseline;
 
   @media (min-width: 560px) {
     margin: 20px 0 30px 0;
-
+    align-self: inherit;
   }
 
   @media (min-width: 768px) {
@@ -84,7 +88,7 @@ export const SSubTitle = styled.h2`
 export const SJoinWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0 50px 0 50px;
+  padding: 0 30px 0 30px;
   align-items: center;
 
   @media (min-width: 560px) { 

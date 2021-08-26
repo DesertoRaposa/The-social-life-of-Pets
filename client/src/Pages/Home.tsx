@@ -16,7 +16,7 @@ import {
 import BaseModalWrapper from '../components/Modal/BaseModalWrapper';
 
 const Home = (): JSX.Element => {
-  const [isModalVisible, setIsModalVisible] = useState<boolean>(true);
+  const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
 
   const toggleModal = () => {
     setIsModalVisible(wasModalVisible => !wasModalVisible)
@@ -40,7 +40,7 @@ const Home = (): JSX.Element => {
             isModalVisible={isModalVisible}
             onCloseClick={toggleModal} />
         </SJoinWrapper>
-        <Login />
+        {/* <Login /> */}
         {/* <Register /> */}
       </SContainer>
       <SContainer>

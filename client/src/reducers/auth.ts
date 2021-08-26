@@ -1,22 +1,15 @@
-import { SET_CURRENT_USER } from '../actions/types';
+import {
+  AuthAction,
+  AuthState,
+  SET_CURRENT_USER
+} from '../actions/types';
 
-interface UserState {
-  isAuthenticated: boolean;
-  user: {} // ??
-}
-
-const initialState: UserState = {
+const initialState: AuthState = {
   isAuthenticated: false,
-  user: {}
+  user: null
 }
 
-interface UserAction {
-  type: string;
-  payload?: any;
-
-}
-
-export const Auth = (state = initialState, action: UserAction): UserState => {
+export const Auth = (state = initialState, action: AuthAction) => {
   switch (action.type) {
     case SET_CURRENT_USER:
       return {
@@ -25,6 +18,7 @@ export const Auth = (state = initialState, action: UserAction): UserState => {
         user: action.payload
       }
     default:
-      return state
+      return state;
   }
 }
+

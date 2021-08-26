@@ -1,7 +1,9 @@
 import React from 'react';
 import { createPortal } from 'react-dom';
-import { Overlay } from './style';
-
+import {
+  Overlay,
+  SModalWrapper
+} from './style';
 
 export interface ModalProps {
   onCloseClick: () => void;
@@ -14,9 +16,9 @@ const Modal = ({ onCloseClick, children }: ModalProps): JSX.Element => {
       className="wrapper"
       onClick={onCloseClick}
     >
-      <div onClick={e => e.stopPropagation()}>
+      <SModalWrapper onClick={e => e.stopPropagation()}>
         {children}
-      </div>
+      </SModalWrapper>
     </Overlay>, document.body);
 }
 

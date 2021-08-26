@@ -6,7 +6,7 @@ export const SHeaderWrapper = styled.div`
   flex-direction:column;
   justify-content: center;
   margin: 0 auto;
-  max-width: 1440px;
+  max-width: 1800px;
   padding: 13px 20px 0 20px;
 
   @media (min-width: 480px) {
@@ -19,7 +19,8 @@ export const SHeaderWrapper = styled.div`
     padding: 16px 60px;
   }
 
-  @media (min-width: 1280px) {
+  @media (min-width: 1800px) {
+    max-width: 2200px;
   }
 `;
 
@@ -32,7 +33,7 @@ export const SHeaderMenu = styled.div`
   }
   
   @media (min-width: 1024px) {
-    max-width: 690px;
+    max-width: 630px;
     width: 100%;
     justify-content: space-evenly;
   }

@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-export const SLoginWrapper = styled.div`
+export const SFormWrapper = styled.div`
   max-width: 269px;
   background: #fff;
   border-radius: 28px;
@@ -13,10 +13,6 @@ export const SLoginWrapper = styled.div`
 
   @media (min-width: 450px) {
     margin-top: 30px;
-  }
-
-  @media (min-width: 768px) {
-
   }
 
   @media (min-width: 1024px) {
@@ -32,88 +28,34 @@ export const SLoginWrapper = styled.div`
   }
 `;
 
-export const SLoginTitle = styled.div`
+export const SFormTitle = styled.div`
   font-weight: 500;
-
-  @media (min-width: 560px) {
-
-  }
-
-  @media (min-width: 768px) {
-
-  }
 
   @media (min-width: 1024px) {
     font-size: 20px;
   }
-
-  @media (min-width: 1280px) {
-  }
 `;
 
-export const SLoginSubtitle = styled.div`
+export const SFormSubtitle = styled.div`
   font-size: 15px;
   margin-top: 5px;
-
-  @media (min-width: 560px) {
-
-  }
-
-  @media (min-width: 768px) {
-
-  }
-
-  @media (min-width: 1024px) {
-  }
-
-  @media (min-width: 1280px) {
-  }
 `;
 
-export const SLoginForm = styled.form`
+export const SForm = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  @media (min-width: 560px) {
-
-  }
-
-  @media (min-width: 768px) {
-
-  }
-
-  @media (min-width: 1024px) {
-  }
-
-  @media (min-width: 1280px) {
-  }
 `;
 
-export const SInputWrapper = styled.div`
 
-  @media (min-width: 560px) {
-  
-  }
-
-  @media (min-width: 768px) {
-
-  }
-
-  @media (min-width: 1024px) {
-  }
-
-  @media (min-width: 1280px) {
-  }
-`;
-
-export const SLoginInput = styled.input`
+export const SFormInput = styled.input`
   width: 100%;
   padding: 5px 10px;
   border: 1px solid #DFDFE1;
   border-radius: 8px;
   margin: 10px 0 10px 0;
   outline: none;
+  font-size: 16px;
 
   &:hover:enabled,
   &:focus {
@@ -124,23 +66,12 @@ export const SLoginInput = styled.input`
     border: 1px solid red;
   }
 
-  @media (min-width: 560px) {
-
-  }
-
-  @media (min-width: 768px) {
-
-  }
-
   @media (min-width: 1024px) {
     padding: 10px 10px;
   }
-
-  @media (min-width: 1280px) {
-  }
 `;
 
-export const SLoginButton = styled.button`
+export const SFormButton = styled.button`
   width: 80%;
   background: #000;
   color: #fff;
@@ -149,18 +80,4 @@ export const SLoginButton = styled.button`
   text-align: center;
   margin-top: 10px;
   border: none;
-  
-  @media (min-width: 560px) {
-
-  }
-
-  @media (min-width: 768px) {
-
-  }
-
-  @media (min-width: 1024px) {
-  }
-
-  @media (min-width: 1280px) {
-  }
 `;

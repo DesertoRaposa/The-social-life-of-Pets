@@ -14,7 +14,9 @@ const Modal = ({ onCloseClick, children }: ModalProps): JSX.Element => {
       className="wrapper"
       onClick={onCloseClick}
     >
-      {children}
+      <div onClick={e => e.stopPropagation()}>
+        {children}
+      </div>
     </Overlay>, document.body);
 }
 

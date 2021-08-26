@@ -1,41 +1,38 @@
 import React from 'react';
 import './style.tsx';
 import {
-  SLoginButton,
-  SLoginSubtitle,
-  SLoginTitle,
-  SLoginWrapper,
-  SLoginForm,
-  SInputWrapper,
-  SLoginInput
+  SFormButton,
+  SFormSubtitle,
+  SFormTitle,
+  SFormWrapper,
+  SForm,
+  SFormInput
 } from './style';
 
 const Login = (): JSX.Element => {
   return (
-    <SLoginWrapper>
-      <SLoginTitle>
+    <SFormWrapper>
+      <SFormTitle>
         Уже есть аккаунт?
-      </SLoginTitle>
-      <SLoginSubtitle>
+      </SFormTitle>
+      <SFormSubtitle>
         Найдите друзей и гуляйте вместе
-      </SLoginSubtitle>
+      </SFormSubtitle>
 
-      <SLoginForm>
-        <SInputWrapper>
-          <SLoginInput
-            placeholder="E-mail"
-          />
-          <SLoginInput
-            placeholder="Password"
-          />
-        </SInputWrapper>
-        <SLoginButton
+      <SForm>
+        <SFormInput
+          placeholder="E-mail"
+        />
+        <SFormInput
+          placeholder="Password"
+        />
+        <SFormButton
         // type="submit"
         >
           Войти
-        </SLoginButton>
-      </SLoginForm>
-    </SLoginWrapper>
+        </SFormButton>
+      </SForm>
+    </SFormWrapper>
   );
 }
 

@@ -16,11 +16,12 @@ import {
 import BaseModalWrapper from '../components/Modal/BaseModalWrapper';
 
 const Home = (): JSX.Element => {
-  const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
+  const [isModalVisible, setIsModalVisible] = useState<boolean>(true);
 
   const toggleModal = () => {
     setIsModalVisible(wasModalVisible => !wasModalVisible)
   }
+
   return (
     <SWrapper>
       <Header />

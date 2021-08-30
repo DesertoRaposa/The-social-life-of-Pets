@@ -1,9 +1,6 @@
 import React from 'react';
 import Register from '../Register/Register';
 import Modal from './Modal';
-import { useDispatch } from 'react-redux';
-
-
 
 interface BaseModalWrapperProps {
   isModalVisible: boolean;

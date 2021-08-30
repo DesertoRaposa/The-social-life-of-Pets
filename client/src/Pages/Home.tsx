@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Header from '../components/Header/Header';
-import Login from '../components/Login/Login';
-import Register from '../components/Login/Login';
 import { BrowserRouter, Route } from 'react-router-dom';
 import {
   SWrapper,
@@ -40,8 +38,6 @@ const Home = (): JSX.Element => {
             isModalVisible={isModalVisible}
             onCloseClick={toggleModal} />
         </SJoinWrapper>
-        {/* <Login /> */}
-        {/* <Register /> */}
       </SContainer>
       <SContainer>
         <SJoinWrapper>

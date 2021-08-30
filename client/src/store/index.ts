@@ -3,7 +3,7 @@ import thunk from 'redux-thunk';
 
 import {Auth} from '../reducers/auth';
 
-const rootReducer = combineReducers({
+const rootReducer = combineReducers({ // берем редюсеры и собираем их результаты в единый объект состояния
   auth: Auth
 });
 

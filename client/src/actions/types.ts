@@ -1,4 +1,4 @@
-export const SET_CURRENT_USER = 'SET_CURRENT_USER'
+export const SET_CURRENT_USER = 'SET_CURRENT_USER';
 
 export interface User {
   name: string;
@@ -18,11 +18,6 @@ export interface SignUpData {
   password: string;
 }
 
-export interface SignInData {
-  password: string;
-  email: string;
-}
-
 //Actions 
 
 interface SetUserAction {
@@ -30,7 +25,13 @@ interface SetUserAction {
   payload: User;
 }
 
+
 export type AuthAction = SetUserAction;
+
+// export interface SignInData {
+//   password: string;
+//   email: string;
+// }
 
 // export const POST_LOADING = 'POST_LOADING'
 // export const ADD_POST = 'ADD_POST'
@@ -48,3 +49,10 @@ export type AuthAction = SetUserAction;
 
 // export const USER_LOADING = 'USER_LOADING'
 // export const GET_USER = 'GET_USER'
+
+// export const SET_ERROR = 'SET_ERROR';
+
+// interface SetErrorAction {
+//   type: typeof SET_ERROR;
+//   payload: string;
+// }

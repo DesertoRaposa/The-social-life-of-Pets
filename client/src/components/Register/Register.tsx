@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import { connect, useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { register } from '../../actions/auth';
 import './style.tsx';
 
@@ -13,23 +13,16 @@ import {
 import {
   SFormInput,
 } from '../Login/style';
-import { RootState } from '../../store/index';
-import { AuthState } from '../../actions/types';
 
-
-export interface IRegister {
-  auth: AuthState;
-  register: any; //поменять
-}
-
-const Register = ({ register }: IRegister): JSX.Element => {
+const Register = (): JSX.Element => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const dispatch = useDispatch();
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    register({ name, email, password });
+    dispatch(register({ name, email, password }))
   }
 
   return (
@@ -86,13 +79,11 @@ const Register = ({ register }: IRegister): JSX.Element => {
         <SRegButton
           type="submit"
         >
-          Войти
+          test Войти
         </SRegButton>
       </SRegForm>
     </Fragment>
   );
 }
 
-const mapStateToProps = (state: RootState) => ({ auth: state.auth })
-
-export default connect(mapStateToProps, { register })(Register);
+export default Register;

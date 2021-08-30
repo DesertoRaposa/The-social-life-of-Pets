@@ -21,4 +21,3 @@ export const Auth = (state = initialState, action: AuthAction) => {
       return state;
   }
 }
-

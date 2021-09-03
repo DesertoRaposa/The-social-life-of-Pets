@@ -30,7 +30,9 @@ export const SRegForm  = styled.form`
   width: 100%;
   max-width: 300px;
   margin-bottom: 50px;
-
+  display: flex;
+  flex-direction: column;
+  
   @media (min-width: 768px) {
     margin-bottom: 60px;
     max-width: 400px;
@@ -53,6 +55,7 @@ export const SRegButton = styled.button`
   text-align: center;
   margin-top: 10px;
   border: none;
+  align-self: center;
   
   @media (min-width: 768px) {
     max-width: 220px;

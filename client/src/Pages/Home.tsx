@@ -11,13 +11,23 @@ import {
   SJoinButton,
   SContainer
 } from './style';
-import BaseModalWrapper from '../components/Modal/BaseModalWrapper';
+
+
+import Modal from '../components/Modal/Modal';
+import Register from '../components/Register/Register';
+
+import Login from '../components/Login/Login';
+
 
 const Home = (): JSX.Element => {
-  const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
-
-  const toggleModal = () => {
-    setIsModalVisible(wasModalVisible => !wasModalVisible)
+  const [regVisible, setRegVisible] = useState<boolean>(false);
+  const [infoVisible, setInfoVisible] = useState<boolean>(false);
+  
+  const regClosed = (status: boolean) => {
+    if (status) {
+      setRegVisible(false)
+      setInfoVisible(true)
+    }
   }
 
   return (
@@ -31,13 +41,22 @@ const Home = (): JSX.Element => {
           <SSubTitle>
             Hello! Here  you can create an account for your lovely pet
           </SSubTitle>
-          <SJoinButton onClick={toggleModal}>
+          <SJoinButton onClick={() => setRegVisible(true)}>
             Присоединиться к нам
           </SJoinButton>
-          <BaseModalWrapper
-            isModalVisible={isModalVisible}
-            onCloseClick={toggleModal} />
+
+          {regVisible && (
+            <Modal onBackdropClick={() => setRegVisible(false)}>
+              <Register onClose={(status) => regClosed(status)} />
+            </Modal>
+          )}
+          {infoVisible && (
+            <Modal onBackdropClick={() => setInfoVisible(false)}>
+              All done
+            </Modal>
+          )}
         </SJoinWrapper>
+        <Login />
       </SContainer>
       <SContainer>
         <SJoinWrapper>

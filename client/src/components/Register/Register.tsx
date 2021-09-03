@@ -14,7 +14,11 @@ import {
   SFormInput,
 } from '../Login/style';
 
-const Register = (): JSX.Element => {
+interface IRegister {
+  onClose: (arg: boolean) => void;
+}
+
+const Register = ({ onClose }: IRegister): JSX.Element => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -23,6 +27,8 @@ const Register = (): JSX.Element => {
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     dispatch(register({ name, email, password }))
+    console.log('закрыть попап');
+    onClose(name.length > 0 ? true : false);
   }
 
   return (
@@ -40,7 +46,7 @@ const Register = (): JSX.Element => {
           name="name"
           value={name}
           onChange={(e) => setName(e.currentTarget.value)}
-          required
+        // required
         />
         <SRegSubtitle>
           Почта
@@ -51,7 +57,7 @@ const Register = (): JSX.Element => {
           name="email"
           value={email}
           onChange={(e) => setEmail(e.currentTarget.value)}
-          required
+        // required
         />
         <SRegSubtitle>
           Пароль
@@ -62,7 +68,7 @@ const Register = (): JSX.Element => {
           name="password"
           value={password}
           onChange={e => setPassword(e.currentTarget.value)}
-          required
+        // required
         />
         <SRegSubtitle>
           Порода/Пока неактивно
@@ -79,7 +85,7 @@ const Register = (): JSX.Element => {
         <SRegButton
           type="submit"
         >
-          test Войти
+          Зарегистрироваться
         </SRegButton>
       </SRegForm>
     </Fragment>

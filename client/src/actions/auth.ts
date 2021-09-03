@@ -14,13 +14,13 @@ import { RootState } from '../store';
 
 export const register = (userData: SignUpData): ThunkAction<void, RootState, null, AuthAction> => {
   return async dispatch => {
-    try {
-      const response = await axios.post('/api/auth/register', userData)
-      console.log(response.data)
-      
-    } catch (err) {
-      console.log(err);
-    }
+    await axios.post('/api/auth/register', userData)
+      .then(() => {
+        console.log('ok ok ok')
+      })
+      .catch(function (error) {
+        console.log('error');
+      })
   }
 }
 

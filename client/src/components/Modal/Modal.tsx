@@ -6,15 +6,15 @@ import {
 } from './style';
 
 export interface ModalProps {
-  onCloseClick: () => void;
+  onBackdropClick: () => void;
   children: React.ReactNode;
 }
 
-const Modal = ({ onCloseClick, children }: ModalProps): JSX.Element => {
+const Modal = ({ onBackdropClick, children }: ModalProps): JSX.Element => {
   return createPortal(
     <Overlay
       className="wrapper"
-      onClick={onCloseClick}
+      onClick={onBackdropClick}
     >
       <SModalWrapper onClick={e => e.stopPropagation()}>
         {children}

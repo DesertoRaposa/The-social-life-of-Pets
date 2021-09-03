@@ -10,9 +10,12 @@ export const SFormWrapper = styled.div`
   flex-direction: column;
   padding: 20px 25px 25px 25px;
   border: 1px solid #DFDFE1;
+  width: 100%;
+
   @media (min-width: 450px) {
     margin-top: 30px;
   }
+
   @media (min-width: 1024px) {
     max-width: 369px;
     padding: 25px 35px 35px 35px;
@@ -20,6 +23,7 @@ export const SFormWrapper = styled.div`
     margin-right: 30px;
     
   }
+  
   @media (min-width: 1920px) {
     margin-right: 100px;
   }
